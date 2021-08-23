@@ -25,9 +25,9 @@ const Register = () => {
           <div className={styles["input-wrapper"]}>
             <TextInput
               placeholder="Full Name*"
-              value={data.password}
+              value={data.name}
               setValue={(value: string) =>
-                setData({ ...data, password: value })
+                setData({ ...data, name: value })
               }
             />
           </div>
@@ -40,6 +40,7 @@ const Register = () => {
           </div>
           <div className={styles["input-wrapper"]}>
             <TextInput
+              type="password"
               placeholder="Password*"
               value={data.password}
               setValue={(value: string) =>

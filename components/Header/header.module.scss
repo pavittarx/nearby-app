@@ -1,5 +1,7 @@
 .app-header-ctr {
   padding: 1rem;
+  user-select: none;
+  background: #fff;
 
   display: flex;
   justify-content: space-between;
@@ -10,9 +12,9 @@
 
   gap: 20px;
 
-  
   .logo-ctr {
     display: inline;
+    cursor: pointer;
 
     .logo {
       background: var(--gradient);
@@ -20,7 +22,7 @@
       color: transparent;
       font-size: 2rem;
       font-weight: 700;
-      filter: drop-shadow(1px 1px rgba(0,0,0,0.15));
+      filter: drop-shadow(1px 1px rgba(0, 0, 0, 0.15));
     }
   }
 }

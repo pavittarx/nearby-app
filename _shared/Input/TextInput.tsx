@@ -15,8 +15,12 @@ const TextInputContainer = styled.div`
   &:focus-within {
     border: 1px solid var(--primary);
 
-    input {
+    .input {
       color: var(--primary);
+
+      &::placeholder {
+        color: var(--primary);
+      }
     }
   }
 `;
@@ -25,6 +29,7 @@ const TextInput = ({ placeholder, value, setValue, type }: TextInputProps) => {
   return (
     <TextInputContainer>
       <input
+        className="input"
         type={type ? type : "text"}
         placeholder={placeholder}
         value={value}
