@@ -1,5 +1,13 @@
 :root {
-  --primary: #285bd9;
+  --primary: #01baef;
+  --secondary: #0e9fa4;
+  --gradient: linear-gradient(
+    90deg,
+    hsla(193, 99%, 47%, 1) 0%,
+    hsla(182, 84%, 35%, 0.9) 100%
+  );
+
+  --white: #fff;
 
   --text: #444;
   --border: #555;

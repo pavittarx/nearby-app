@@ -1,0 +1,28 @@
+.register-main-ctr{
+  margin: 2rem 0;
+
+  h2{
+    color: var(--secondary);
+  }
+
+  .form-wrapper{
+    margin: 0 auto;
+
+    border: 2px solid var(--primary);
+    padding: 2rem;
+    max-width: 700px;
+
+    .input-wrapper{
+      margin: 1.5rem 0;
+      width: 70%;
+    }
+
+    .role-wrapper{
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+
+      gap: 1rem;
+    }
+  }
+}
