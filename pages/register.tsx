@@ -7,6 +7,8 @@ import Button from "@/_shared/Buttons";
 import TextInput from "@/_shared/Input/TextInput";
 import Radio from "@/_shared/Input/Radio";
 
+import { register } from "@/controllers/auth";
+
 const Register = () => {
   const [data, setData] = useState({
     name: "",
@@ -15,6 +17,12 @@ const Register = () => {
     phone: "",
     type: "",
   });
+
+  const registerHandler = async () => {
+    const result = await register(data);
+
+    console.log(result);
+  };
 
   return (
     <>
@@ -26,9 +34,7 @@ const Register = () => {
             <TextInput
               placeholder="Full Name*"
               value={data.name}
-              setValue={(value: string) =>
-                setData({ ...data, name: value })
-              }
+              setValue={(value: string) => setData({ ...data, name: value })}
             />
           </div>
           <div className={styles["input-wrapper"]}>
@@ -79,7 +85,10 @@ const Register = () => {
             </div>
           </div>
           <div className={styles["input-wrapper"]}>
-            <Button name="Register" action={() => {}} />
+            <Button name="Register" action={registerHandler} />
+          </div>
+          <div>
+            Already a user? <a href="/login">Login</a>
           </div>
         </div>
       </main>

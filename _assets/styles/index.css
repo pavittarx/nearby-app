@@ -60,3 +60,12 @@ input {
   border: 0;
   outline: 0;
 }
+
+a{
+  text-decoration: none;
+  color: var(--secondary);
+}
+
+a:visited{
+  color: vaR(--text);
+}
